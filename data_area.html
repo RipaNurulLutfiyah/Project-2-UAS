@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eRuang| Daftar Ruangan</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+</head>
+
+<body class="hold-transition sidebar-mini">
+    
+
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="#" class="brand-link ml-2">
+                <span class="brand-text font-weight-light">SIPAK - Backend</span>
+            </a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex d-flex  align-items-center">
+                    <i class="bi bi-person-circle text-white fs-3 ml-2"></i>
+                    <div class="info">
+                        <a href="#" class="d-block">Admin Area Parkir</a>
+                    </div>
+                </div>
+
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                            aria-label="Search" />
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-item">
+                            <a href="datakendaraan.html" class="nav-link">
+                                <i class="bi bi-speedometer nav-icon fs-5"></i>
+                                <p class="ml-2">Dashboard </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-car-front-fill nav-icon fs-5"></i>
+                                <p class="ml-2">
+                                    Kendaraan
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="datakendaraan.html" class="nav-link active">
+                                        <i class="bi bi-card-list nav-icon fs-5 ml-3"></i>
+                                        <p class="ml-2">Data Kendaraan </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="data_area.html" class="nav-link">
+                                        <i class="bi bi-card-list nav-icon fs-5 ml-3"></i>
+                                        <p class="ml-2">Data Parkir </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-building-fill nav-icon fs-5"></i>
+                                <p class="ml-2">Gedung </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="data-area-parkir.html" class="nav-link">
+                                <i class="bi bi-geo-alt-fill nav-icon fs-5"></i>
+                                <p class="ml-2">Area Parkir</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-sign-out nav-icon"></i>
+                                <p class="ml-2">Log Out</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    </div>
+    <!-- Sidebar Menu -->
+
+
+    </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+    </aside>
+    
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Data Area Parkir</h3>
+                                <div class="col-mr-6">
+                                    <ol class="breadcrumb float-sm-right">
+                                        <li class="breadcrumb-item"><a href="#">Gedung</a></li>
+                                        <li class="breadcrumb-item"><a href="#"></a></li>
+
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <button class="btn btn-primary mb-3">Tambah</button>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama Area</th>
+                                            <th>Kapasitas</th>
+                                            <th>Gedung</th>
+                                            <th>Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Area Depan B2</td>
+                                            <td>100</td>
+                                            <td>Kampus b2 STT-NF</td>
+                                            <td>Edit | Hapus</td>
+
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Area Belakang B2</td>
+                                            <td>40</td>
+                                            <td>Kampus B2 STT-NF</td>
+                                            <td>Edit | Hapus</td>
+
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+        </div>
+        <strong>Developed by Mahasiswa STT Nurul Fikri &copy; 2024</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../plugins/jszip/jszip.min.js"></script>
+    <script src="../plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+</body>
+
+</html>
